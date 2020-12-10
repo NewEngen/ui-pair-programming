@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./reset.css";
+
+:root {
+  --body-bg: #eaeaea;
+  --white: #fff;
+  --gray: #bbb;
+  --black: #333;
+  --base-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: sans-serif;
+  background: var(--body-bg);
+}
+
+.Intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  height: 100vh;
+}
+
+.UsersList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  padding: 1em;
+}
+
+.UserItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: var(--white);
+  padding: 1em;
+  box-shadow: var(--base-shadow);
+  text-decoration: none;
+}
+
+.UserName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.UserNameFirst {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.5em;
+}
+
+.UserNameLast {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--gray);
+}
+
+.UserAvatar {
+  border-radius: 9999px;
+  margin-bottom: 1em;
 }
